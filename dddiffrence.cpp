@@ -1,26 +1,15 @@
-#include <bits/stdc++.h>
-
+#include<iostream>
+#include<cmath>
 using namespace std;
-
 int main()
 {
-    int n;
-    cin>>n;
-    int i=0,curl=0,cnt = 0;
-    char a[n];
-    cin>>a;
-
-    for(i=0;i<n;i++)
-    {
-        if(a[i]=='U')
-        {
-            curl++;
-            if(curl==0)
-                cnt++;
-        }
-        else if(a[i]=='D')
-            curl--;
-    }
-    cout<<cnt;
-    return 0;
+	float a;
+	float p=100000;
+	float r=0.1;
+	for(int day;day<=30;day++)
+	{
+		a=p*pow(1+r,day);
+		cout<<day<<"---------"<<a<<endl;
+		
+	}
 }
